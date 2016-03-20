@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="pl.marekjedrzejewski.rgbtohsv.MainActivity"
+    android:gravity="center"
+    android:background="#e0e0e0">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="@dimen/layout_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RGB"
+                android:id="@+id/rgbText"
+                android:layout_marginRight="@dimen/label_right_margin"
+                android:layout_weight="1" />
+
+            <NumberPicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/numberR"
+                android:layout_weight="1" />
+
+            <NumberPicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/numberG"
+                android:layout_weight="1" />
+
+            <NumberPicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/numberB"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="@dimen/layout_width"
+            android:layout_height="@dimen/color_preview_height"
+            android:id="@+id/colorPreview"
+            android:background="#000"
+            android:layout_gravity="center"
+            android:text="#FF000000"
+            android:textColor="#ffffff"
+            android:textStyle="italic"
+            android:textIsSelectable="true"
+            android:textAlignment="gravity"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="@dimen/layout_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HSV"
+                android:id="@+id/hsvText"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/label_right_margin" />
+
+            <NumberPicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/numberH"
+                android:layout_weight="1" />
+
+            <NumberPicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/numberS"
+                android:layout_weight="1" />
+
+            <NumberPicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/numberV"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
