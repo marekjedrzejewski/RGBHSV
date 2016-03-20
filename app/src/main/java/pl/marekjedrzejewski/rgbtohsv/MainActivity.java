@@ -1,9 +1,12 @@
 package pl.marekjedrzejewski.rgbtohsv;
 
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 
@@ -59,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
             floatstrings[i] = String.valueOf((float)(i) / 100.f);
         }
         numberPicker.setDisplayedValues(floatstrings);
+        
+        // wyświetli klawiaturę numeryczną zamiast tekstowej
+        ((EditText)numberPicker.getChildAt(0)).setRawInputType(InputType.TYPE_CLASS_NUMBER);
 
         numberPicker.setOnValueChangedListener(hsvChangeListener);
         return numberPicker;
