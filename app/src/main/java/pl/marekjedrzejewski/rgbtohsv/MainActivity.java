@@ -107,7 +107,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void setColorPreview(int col) {
         colorPreview.setBackgroundColor(col);
-        colorPreview.setText("#" + Integer.toHexString(col).toUpperCase());
+        // .substring(2), żeby wyświetlić RGB, nie ARGB
+        colorPreview.setText("#" + Integer.toHexString(col).toUpperCase().substring(2));
         colorPreview.setTextColor(contrast(col));
     }
 

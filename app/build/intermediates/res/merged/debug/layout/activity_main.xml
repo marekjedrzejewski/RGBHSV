@@ -60,7 +60,7 @@
             android:id="@+id/colorPreview"
             android:background="#000"
             android:layout_gravity="center"
-            android:text="#FF000000"
+            android:text="#000000"
             android:textColor="#ffffff"
             android:textStyle="italic"
             android:textIsSelectable="true"

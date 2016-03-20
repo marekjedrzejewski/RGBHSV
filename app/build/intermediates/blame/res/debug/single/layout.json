@@ -4,12 +4,12 @@
         "source": "/home/marek/MEGA/polsl/interfejsy/lab/0315/RGBtoHSV/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_part_time.xml"
     },
     {
-        "merged": "/home/marek/MEGA/polsl/interfejsy/lab/0315/RGBtoHSV/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
-        "source": "/home/marek/MEGA/polsl/interfejsy/lab/0315/RGBtoHSV/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_up_container.xml"
-    },
-    {
         "merged": "/home/marek/MEGA/polsl/interfejsy/lab/0315/RGBtoHSV/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
         "source": "/home/marek/MEGA/polsl/interfejsy/lab/0315/RGBtoHSV/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "/home/marek/MEGA/polsl/interfejsy/lab/0315/RGBtoHSV/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/home/marek/MEGA/polsl/interfejsy/lab/0315/RGBtoHSV/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_up_container.xml"
     },
     {
         "merged": "/home/marek/MEGA/polsl/interfejsy/lab/0315/RGBtoHSV/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
