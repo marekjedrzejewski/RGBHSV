@@ -19,12 +19,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // ustawienie wszystkich numberpickerów na zakres 0-255 i ustawienie listenera
+        // setting the proper range for pickers and value change listeners
         numberR = initNumberPickerRGB(R.id.numberR);
         numberG = initNumberPickerRGB(R.id.numberG);
         numberB = initNumberPickerRGB(R.id.numberB);
 
-        // ustawienie pickera dla H na 0-359, S i V na 0-100 i ustawienie listenera
         numberH = initNumberPickerH(R.id.numberH);
         numberS = initNumberPickerSV(R.id.numberS);
         numberV = initNumberPickerSV(R.id.numberV);
@@ -32,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         colorPreview = (TextView)findViewById(R.id.colorPreview);
     }
 
-    // Inicjalizowanie numberpickerów
     private NumberPicker initNumberPickerRGB(int id) {
         NumberPicker numberPicker = (NumberPicker)findViewById(id);
         numberPicker.setMinValue(0);
@@ -54,21 +52,20 @@ public class MainActivity extends AppCompatActivity {
         numberPicker.setMinValue(0);
         numberPicker.setMaxValue(100);
 
-        // Przedstawienie wartości jako float z zakresu 0-1
+        // Representation on numberpicker as float in range 0-1, step 0.01
         String floatstrings[] = new String[101];
         for (int i = 0; i < 101; i++) {
             floatstrings[i] = String.valueOf((float)(i) / 100.f);
         }
         numberPicker.setDisplayedValues(floatstrings);
 
-        // wyświetli klawiaturę numeryczną zamiast tekstowej
+        // display numeric keyboard instead of text for it
         ((EditText)numberPicker.getChildAt(0)).setRawInputType(InputType.TYPE_CLASS_NUMBER);
 
         numberPicker.setOnValueChangedListener(hsvChangeListener);
         return numberPicker;
     }
 
-    // Listenery
     private NumberPicker.OnValueChangeListener rgbChangeListener =
             new NumberPicker.OnValueChangeListener() {
                 @Override
@@ -111,12 +108,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void setColorPreview(int col) {
         colorPreview.setBackgroundColor(col);
-        // .substring(2), żeby wyświetlić RGB, nie ARGB
+        // .substring(2), because we want RGB instead of ARGB
         colorPreview.setText("#" + Integer.toHexString(col).toUpperCase().substring(2));
         colorPreview.setTextColor(contrast(col));
     }
 
-    // ustawienie kontrastującego koloru, żeby kod koloru był widoczny
+    // That's necessary for the color code to be visible on the preview
     private int contrast(int col) {
         float[] hsv = new float[3];
         Color.colorToHSV(col, hsv);
